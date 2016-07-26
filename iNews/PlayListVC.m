@@ -9,8 +9,6 @@
 #import "PlayListVC.h"
 #import "TFHpple.h"
 #import "TFHppleElement.h"
-#import "Song.h"
-#import "SongCell.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import "SideMenuNavVC.h"
 #import "PlayBar.h"
@@ -56,26 +54,26 @@
     NSArray *playListNodes = [listParser searchWithXPathQuery:listXpathQueryString];
     
     // 4 Create an array to hold new tutorial objects
-    NSMutableArray *newSongs = [[NSMutableArray alloc] initWithCapacity:0];
-    for (TFHppleElement *element in playListNodes) {
-        // 5 Creat new tutorial object and add to array
-        Song *song = [[Song alloc] init];
-        [newSongs addObject:song];
-        
-        NSArray *a = [element searchWithXPathQuery:@"//a"];
-        NSLog(@"\n img:%@ \n href:%@ \n NameOfSong:%@ \n NameOfArtist:%@", [(TFHppleElement *)a[0] children][0][@"src"], a[0][@"href"], a[1][@"title"],[(TFHppleElement *)a[2] content]);
-        
-        // 6 Return the elements due to XpathQuery
-        song.artist = [(TFHppleElement *)a[2] content];
-        song.songTitle = a[1][@"title"];
-        song.imageUrl =[(TFHppleElement *)a[0] children][0][@"src"];
-        
+//    NSMutableArray *newSongs = [[NSMutableArray alloc] initWithCapacity:0];
+//    for (TFHppleElement *element in playListNodes) {
+//        // 5 Creat new tutorial object and add to array
+//        Song *song = [[Song alloc] init];
+//        [newSongs addObject:song];
+//        
+//        NSArray *a = [element searchWithXPathQuery:@"//a"];
+//        NSLog(@"\n img:%@ \n href:%@ \n NameOfSong:%@ \n NameOfArtist:%@", [(TFHppleElement *)a[0] children][0][@"src"], a[0][@"href"], a[1][@"title"],[(TFHppleElement *)a[2] content]);
+//        
+//        // 6 Return the elements due to XpathQuery
+//        song.artist = [(TFHppleElement *)a[2] content];
+//        song.songTitle = a[1][@"title"];
+//        song.imageUrl =[(TFHppleElement *)a[0] children][0][@"src"];
+    
     }
     
     // 8 Add all the items to the object array
-    _object = newSongs;
-    [self.myTableView reloadData];
-}
+//    _object = newSongs;
+//    [self.myTableView reloadData];
+//}
 
 #pragma mark - Table view data source
 
@@ -88,25 +86,6 @@
     
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SongCell";
-    
-    SongCell *cell = (SongCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SongCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    
-    Song *songs = [_object objectAtIndex:indexPath.row];
-    cell.songTitleLabel.text = songs.songTitle;
-    cell.artistTitleLabel.text = songs.artist;
-    
-    [cell.songImage setImageWithURL:[NSURL URLWithString:songs.imageUrl] placeholderImage:[UIImage imageNamed:@"newsicon.png"]];
-    [cell layoutSubviews];
-    return cell;
-    
-}
 
 -(void)viewWillDisappear:(BOOL)animated
 {

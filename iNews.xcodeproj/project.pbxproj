@@ -21,9 +21,6 @@
 		C6C496AF1CC4D711007DF5CD /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C496AD1CC4D711007DF5CD /* XPathQuery.m */; };
 		C6C496B51CC4D737007DF5CD /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C496B31CC4D737007DF5CD /* Record.m */; };
 		C6C496BA1CC4DC45007DF5CD /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C496B91CC4DC45007DF5CD /* libxml2.tbd */; };
-		C6C496C31CC4E939007DF5CD /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C496BC1CC4E938007DF5CD /* Song.m */; };
-		C6C496C41CC4E939007DF5CD /* SongCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C496BE1CC4E938007DF5CD /* SongCell.m */; };
-		C6C496C51CC4E939007DF5CD /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C496BF1CC4E938007DF5CD /* SongCell.xib */; };
 		C6C496D81CC4F81B007DF5CD /* iOSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C496D71CC4F81B007DF5CD /* iOSRequest.m */; };
 		C6C496DA1CC5097C007DF5CD /* Stop.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C496D91CC5097C007DF5CD /* Stop.png */; };
 		C6C496DC1CC50989007DF5CD /* Play.png in Resources */ = {isa = PBXBuildFile; fileRef = C6C496DB1CC50989007DF5CD /* Play.png */; };
@@ -91,11 +88,6 @@
 		C6C496B21CC4D737007DF5CD /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
 		C6C496B31CC4D737007DF5CD /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
 		C6C496B91CC4DC45007DF5CD /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		C6C496BB1CC4E938007DF5CD /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Song.h; path = ../../../.Trash/Song.h; sourceTree = "<group>"; };
-		C6C496BC1CC4E938007DF5CD /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Song.m; path = ../../../.Trash/Song.m; sourceTree = "<group>"; };
-		C6C496BD1CC4E938007DF5CD /* SongCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SongCell.h; path = ../../../.Trash/SongCell.h; sourceTree = "<group>"; };
-		C6C496BE1CC4E938007DF5CD /* SongCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SongCell.m; path = ../../../.Trash/SongCell.m; sourceTree = "<group>"; };
-		C6C496BF1CC4E938007DF5CD /* SongCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SongCell.xib; path = ../../../.Trash/SongCell.xib; sourceTree = "<group>"; };
 		C6C496D61CC4F81B007DF5CD /* iOSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSRequest.h; sourceTree = "<group>"; };
 		C6C496D71CC4F81B007DF5CD /* iOSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSRequest.m; sourceTree = "<group>"; };
 		C6C496D91CC5097C007DF5CD /* Stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stop.png; sourceTree = "<group>"; };
@@ -189,9 +181,6 @@
 		C6C496951CC4D6B1007DF5CD /* Music Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C6C496BD1CC4E938007DF5CD /* SongCell.h */,
-				C6C496BE1CC4E938007DF5CD /* SongCell.m */,
-				C6C496BF1CC4E938007DF5CD /* SongCell.xib */,
 				C6C496A01CC4D6D2007DF5CD /* PlayBar.h */,
 				C6C496A11CC4D6D2007DF5CD /* PlayBar.m */,
 				C6C496A21CC4D6D2007DF5CD /* PlayBar.xib */,
@@ -223,8 +212,6 @@
 			children = (
 				C6C496B21CC4D737007DF5CD /* Record.h */,
 				C6C496B31CC4D737007DF5CD /* Record.m */,
-				C6C496BB1CC4E938007DF5CD /* Song.h */,
-				C6C496BC1CC4E938007DF5CD /* Song.m */,
 			);
 			name = Properties;
 			sourceTree = "<group>";
@@ -527,7 +514,6 @@
 				C6EA08731CACCA35000935FE /* Assets.xcassets in Resources */,
 				C6EA089F1CACD11B000935FE /* CategoryCell.xib in Resources */,
 				C6C496E31CC529EB007DF5CD /* PlayListVC.xib in Resources */,
-				C6C496C51CC4E939007DF5CD /* SongCell.xib in Resources */,
 				C6C496A41CC4D6D2007DF5CD /* PlayBar.xib in Resources */,
 				C6C4967C1CC4D017007DF5CD /* DetailScreenVC.xib in Resources */,
 			);
@@ -606,7 +592,6 @@
 				C6C496D81CC4F81B007DF5CD /* iOSRequest.m in Sources */,
 				C6EA08B51CAD180F000935FE /* ContentScreenVC.m in Sources */,
 				C6EA08B01CAD1431000935FE /* DetailScreenVC.m in Sources */,
-				C6C496C31CC4E939007DF5CD /* Song.m in Sources */,
 				C6C4968A1CC4D5AD007DF5CD /* SideMenuVC.m in Sources */,
 				C6C496941CC4D5EC007DF5CD /* ParseData.m in Sources */,
 				C6C496891CC4D5AD007DF5CD /* SideMenuNavVC.m in Sources */,
@@ -618,7 +603,6 @@
 				C6C496901CC4D5C6007DF5CD /* TFHpple.m in Sources */,
 				C6C496B51CC4D737007DF5CD /* Record.m in Sources */,
 				C6EA08A21CACD2CF000935FE /* CategoryCell.m in Sources */,
-				C6C496C41CC4E939007DF5CD /* SongCell.m in Sources */,
 				C6C496AE1CC4D711007DF5CD /* XMLReader.m in Sources */,
 				C6C496A31CC4D6D2007DF5CD /* PlayBar.m in Sources */,
 				C6C496E21CC529EB007DF5CD /* PlayListVC.m in Sources */,
